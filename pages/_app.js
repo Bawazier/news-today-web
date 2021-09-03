@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import {DefaultLayout} from "../containers";
 import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 
@@ -42,7 +43,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="theme-color" content="#317EFB" />
       </Head>
       <ChakraProvider theme={theme}>
-        <Component {...pageProps} />
+        <DefaultLayout>
+          <Component {...pageProps} />
+        </DefaultLayout>
       </ChakraProvider>
     </>
   );
