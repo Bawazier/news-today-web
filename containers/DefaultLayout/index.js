@@ -1,15 +1,13 @@
 import React from "react";
 import DefaultHeader from "./DefaultHeader";
 import DefaultFooter from "./DefaultFooter";
-import { Container, Box } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 function DefaultLayout(props) {
   return (
     <>
-      <Container maxW="container.xl">
-        <DefaultHeader />
-        <Box>{props.children}</Box>
-      </Container>
+      <DefaultHeader />
+      <Box>{props.children}</Box>
       <DefaultFooter />
     </>
   );
